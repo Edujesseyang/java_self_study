@@ -1,7 +1,7 @@
 public class numBassConvert {
 
     public static void main(String[] args) {
-        // To convert number between bi, hex, oct.
+        // To convert number between bin, hex, oct.
         /*  We can use:
                     bi: add "0B" in the front of the binary number.                    
                     oct: add "0" in the front of the oct number.
