@@ -20,4 +20,6 @@ public class dataTypeConvert {
     public static String charsConcat(final char a, final char b, final char c){
         return "" + a + b + c;
     }
+
+    // Auto data type convert: byte,short, char --> int --> long --> float --> double
 }
