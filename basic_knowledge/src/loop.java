@@ -28,5 +28,11 @@ public class loop {
             }
             System.out.println();
         }
+
+        // 5. iterating array
+        int[] array = {1, 2, 3, 4, 5};
+        for (int number : array) {
+            System.out.println(number);
+        }
     }
 }
