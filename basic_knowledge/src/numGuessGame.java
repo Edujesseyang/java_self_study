@@ -49,6 +49,11 @@ public class numGuessGame {
 
     }
 
+    /**
+     * @param target int: the number need to guess
+     * @return none
+     * @FIXME scanner issue, need to be fixed
+     */
     public static void guessNum(int target) {
         int chance = 7;
 
@@ -59,8 +64,8 @@ public class numGuessGame {
                 System.out.println("Guess the number: ");
                 System.out.println("You have " + chance + " chance to guess");
 
-                inputStr = sc.nextLine();
-                inputNum = Integer.parseInt(inputStr);
+                inputStr = sc.nextLine();  // FIXME
+                inputNum = Integer.parseInt(inputStr);  // FIXME
                 if (inputNum == target) {
                     System.out.println("Bingo! You win, the number is " + target + ". You used " + (7 - chance) + " times to win! ");
                     break;

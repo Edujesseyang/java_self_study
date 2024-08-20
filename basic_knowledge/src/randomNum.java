@@ -7,6 +7,10 @@ public class randomNum {
         System.out.println(randNumMax100);
     }
 
+    /**
+     * @param int max: upper bond
+     * @return int randNum: random int
+    } */
     public static int getRandNum(int max){
         int randNum = new Random().nextInt(max);
         return randNum;
