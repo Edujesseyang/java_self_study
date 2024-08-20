@@ -1,0 +1,15 @@
+import java.util.Random;
+
+
+public class randomNum {
+    public static void main(String[] args) {
+        int randNumMax100 = getRandNum(100);
+        System.out.println(randNumMax100);
+    }
+
+    public static int getRandNum(int max){
+        int randNum = new Random().nextInt(max);
+        return randNum;
+    }
+    
+}
