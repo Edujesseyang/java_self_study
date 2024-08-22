@@ -14,6 +14,10 @@ public class method {
         System.out.println("sum is: " + sum(x, y));
         System.out.println("sum is: " + sum(x));
         System.out.println("sum is: " + sum());
+
+        System.out.println("sum is: " + sumOneToN(10));
+        System.out.println("sum is: " + sumOneToN1(10));
+        System.out.println("sum is: " + sumOneToN2(10));
     }
 
     // define method: 
@@ -65,4 +69,25 @@ public class method {
     public static int sum() {
         return sum(0, 0);
     }
+
+    public static int sumOneToN(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    public static int sumOneToN1(int n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n + sumOneToN1(n - 1);
+        }
+    }
+
+    public static int sumOneToN2(int n) {
+        return n * (n + 1) / 2;
+    }
+
 }
