@@ -7,12 +7,12 @@ public class scrambleArray {
     public static void main(String[] args) {
         Integer[] numArray = arrayInput(0);
         Integer[] scrambleArray = scrambleAnArray(numArray);
+        scrambleArray = scrambleAnArray(scrambleArray);
         printArray(scrambleArray);
 
-        String[] strArray = arrayInput(); // FIXME
-        String[] scrambleStrArray = scrambleAnArray(strArray); // FIXME
-        printArray(scrambleStrArray);
-
+        // String[] strArray = arrayInput(); // FIXME
+        // String[] scrambleStrArray = scrambleAnArray(strArray); // FIXME
+        // printArray(scrambleStrArray);
     }
 
     public static Integer[] arrayInput(int max) {
@@ -42,33 +42,28 @@ public class scrambleArray {
         return array;
     }
 
-    public static String[] arrayInput() { // FIXME
-        System.out.println("Enter how many numbers you want to save:");
-        int max;
-        String[] array = new String[0];
-
-        try (Scanner sc = new Scanner(System.in)) {
-            max = sc.nextInt();
-            sc.nextLine();
-
-            if (max < 0) {
-                throw new InputMismatchException("Can't be negative.");
-            }
-
-            array = new String[max];
-            System.out.println("Now, enter your numbers: ");
-            for (int i = 0; i < max; i++) {
-                array[i] = sc.nextLine();
-            }
-
-        } catch (InputMismatchException e) {
-            System.err.println("Invalid input: " + e.getMessage());
-        } catch (IllegalArgumentException e) {
-            System.err.println("Illegal Argument: " + e.getMessage());
-        }
-        return array;
-    }
-
+    // public static String[] arrayInput() { // FIXME
+    //     System.out.println("Enter how many numbers you want to save:");
+    //     int max;
+    //     String[] array = new String[0];
+    //     try (Scanner sc = new Scanner(System.in)) {
+    //         max = sc.nextInt();
+    //         sc.nextLine();
+    //         if (max < 0) {
+    //             throw new InputMismatchException("Can't be negative.");
+    //         }
+    //         array = new String[max];
+    //         System.out.println("Now, enter your numbers: ");
+    //         for (int i = 0; i < max; i++) {
+    //             array[i] = sc.nextLine();
+    //         }
+    //     } catch (InputMismatchException e) {
+    //         System.err.println("Invalid input: " + e.getMessage());
+    //     } catch (IllegalArgumentException e) {
+    //         System.err.println("Illegal Argument: " + e.getMessage());
+    //     }
+    //     return array;
+    // }
     public static <T> T[] scrambleAnArray(T[] array) {
         System.out.println("Start to scramble array . . .");
         int size = array.length;
