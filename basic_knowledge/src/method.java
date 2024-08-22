@@ -18,6 +18,20 @@ public class method {
         System.out.println("sum is: " + sumOneToN(10));
         System.out.println("sum is: " + sumOneToN1(10));
         System.out.println("sum is: " + sumOneToN2(10));
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] array1 = {};
+        int[] array2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int index = findElement(array, 10);
+        System.out.println("index is: " + index);
+        int index2 = findElement(array, 11);
+        System.out.println("index is: " + index2);
+
+        int index3 = findElement(array1, 10);
+        System.out.println("index is: " + index3);
+
+        System.out.println("Is array and array2 same: " + sameArray(array, array2));
+        System.out.println("Is array and array1 same: " + sameArray(array, array1));
+
     }
 
     // define method: 
@@ -90,4 +104,45 @@ public class method {
         return n * (n + 1) / 2;
     }
 
+    /**
+     * look for an element
+     *
+     * @param array int[] array
+     * @param target int target int
+     * @return int the index of the data
+     */
+    public static int findElement(int[] array, int target) {
+        if (array == null) {
+            return -1;
+        }
+        int length = array.length;
+        for (int i = 0; i < length; i++) {
+            if (array[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+
+    }
+
+    /**
+     * check if two array are same.
+     *
+     * @param array1
+     * @param array2
+     * @return boolean
+     */
+    public static boolean sameArray(int[] array1, int[] array2) {
+
+        if (array1.length != array2.length) {
+            return false;
+        }
+        for (int i = 0; i < array1.length; i++) {
+            if (array1[i] != array2[i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
