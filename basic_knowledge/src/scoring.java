@@ -5,22 +5,24 @@ public class scoring {
 
     public static void main(String[] args) {
         System.out.println("Enter how many scores do you have: ");
-        Scanner sc = new Scanner(System.in);
-        int numOfScores = sc.nextInt();
-        System.out.println("Enter scores:");
-        double[] scores = getScores(numOfScores);
-        printArr(scores);
-        System.out.println("Final score: " + finalScore(scores));
+        try (Scanner sc = new Scanner(System.in)) {
+            int numOfScores = sc.nextInt();
+            System.out.println("Enter scores:");
+            double[] scores = getScores(numOfScores);
+            printArr(scores);
+            System.out.println("Final score: " + finalScore(scores));
+        }
 
     }
 
     public static double[] getScores(int numOfScores) {
-        Scanner sc = new Scanner(System.in);
-        double[] scores = new double[numOfScores];
-        for (int i = 0; i < numOfScores; i++) {
-            scores[i] = sc.nextDouble();
+        double[] scores;
+        try (Scanner sc = new Scanner(System.in)) {
+            scores = new double[numOfScores];
+            for (int i = 0; i < numOfScores; i++) {
+                scores[i] = sc.nextDouble();
+            }
         }
-        sc.close();
         return scores;
     }
 
