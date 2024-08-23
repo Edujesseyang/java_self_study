@@ -50,7 +50,7 @@ public class operators {
         System.out.println(bl); // true
 
         System.out.println(a1 = c1); // print 20, b/c it will assign the value of c1 to a1, then print a1.
-
+        
         // 5) logic operators
         // &, |, &&, ||, !, ^
         int l1 = 10;
