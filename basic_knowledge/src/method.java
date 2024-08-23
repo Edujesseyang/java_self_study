@@ -32,6 +32,9 @@ public class method {
         System.out.println("Is array and array2 same: " + sameArray(array, array2));
         System.out.println("Is array and array1 same: " + sameArray(array, array1));
 
+        int a = 0;
+        tryReturn(a);
+
     }
 
     // define method: 
@@ -144,5 +147,17 @@ public class method {
         }
 
         return true;
+    }
+
+    public static void tryReturn(int a) {
+        if (a > 0) {
+            System.out.println("a > 0");
+            return;
+        }
+        if (a < 0) {
+            System.out.println("a is not 0");
+            return;
+        }
+        System.out.println("a is 0");
     }
 }
